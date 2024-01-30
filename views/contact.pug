@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    section.container
+        .contact-form
+            h1 Contactez-Nous
+
+            form(action='/contact', method='post')
+                label(for='name') Nom:
+                input(type='text', id='name', name='name', required)
+
+                label(for='email') Adresse Email:
+                input(type='email', id='email', name='email', required)
+
+                label(for='message') Message:
+                textarea(id='message', name='message', rows='4', required)
+
+                button(type='submit') Envoyer
+
+    section.container
+        .contact-details
+            h2 Coordonnées de la Blanchisserie
+
+            address
+                strong FooTal
+                ul
+                    li Ouest Foire, Dakar, Sénégal
+                    li 33 000 00 00
+                    li contact@footal.sn
+
+    section.container
+        .opening-hours
+            h2 Horaires d'ouverture
+            ul
+                li Lundi - Vendredi: 9h00 - 17h00
+                li Samedi - Dimanche: Fermé
